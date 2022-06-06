@@ -20,7 +20,7 @@ def login(request):
       password = form.cleaned_data['password']
       user = authenticate(username=username, password=password)
       if user is not None:
-        if user.is_active: # TODO: Зачем? #Нужно. # Ок
+        if user.is_active:
           auth.login(request, user)
           return redirect('/')
         else:
