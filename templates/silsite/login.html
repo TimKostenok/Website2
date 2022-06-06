@@ -3,6 +3,6 @@
   <h1>{{ text }}</h1>
   <form method='POST'>{% csrf_token %}
     {{ form.as_p }}
-    <input type='submit' value='Login' name='login'>
+    <input type='submit' value='Login' name='login' id = 'my_buttons'>
   </form>
 {% endblock %}
